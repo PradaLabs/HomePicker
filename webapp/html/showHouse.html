@@ -1,0 +1,24 @@
+<div modal-show class="modal fade" ng-if="openHouse">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Technologies</h2>
+                            <hr class="star-primary">
+                            <img ng-src="{{srcHouse}}"  class="img-responsive img-centered" alt="">
+                            
+                            <button type="button" class="btn btn-success" ng-click="sendLikeServer();"><i class="fa fa-times"></i>Yes</button>
+                            <button type="button" class="btn btn-danger" ng-click="nextHouse();"><i class="fa fa-times"></i>No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

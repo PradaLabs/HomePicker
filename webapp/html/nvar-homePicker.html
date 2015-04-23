@@ -1,0 +1,51 @@
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                
+                <div class="navbar-brand page-scroll">
+                     <a class="icoHomePickerHeader" href="#search"><img class="fa" src="/css/icons/logo_32x31.png">HomePicker</a>
+                </div>
+               
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div ng-show="showOption()" class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul  class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" ng-href="#search">Search</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" ng-href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" ng-href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>                  
+      <header ng-show="showOption()" class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-1">
+                        <!--h1 class="brand-heading">HomePicker</h1-->
+                        <!-- <p class="intro-text">The new easy way to pick the better option <br>for pick your house , try now.</p> -->
+                        <a ng-href="#search" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    

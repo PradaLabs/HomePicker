@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Home Picker - pick and find new places</title>
+
+	<!-- CSS -->
+	<link href="cleantheme/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="cleantheme/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link href="cleantheme/css/simple-line-icons.css" rel="stylesheet" media="screen">
+	<link href="cleantheme/css/animate.css" rel="stylesheet">
+    
+	<!-- Custom styles CSS -->
+	<link href="cleantheme/css/style.css" rel="stylesheet" media="screen">
+    
+    <script src="cleantheme/js/modernizr.custom.js"></script>
+       
+</head>
+<body  ng-app="homePickerApp" ng-controller="homePickerCtrl" >
+
+	<!-- Preloader -->
+
+	<div id="preloader">
+		<div id="status"></div>
+	</div>
+
+	<!-- Home start -->
+    <!--ng-include="'html/nvar-homePicker.html'"-->
+    <section id="home" class="pfblock-image screen-height" >
+        <div class="home-overlay"></div>
+		<div class="intro">
+			<div class="start">Hello, would you like to rent or buy a home?</div>
+			<h1>just pick and find your home</h1>
+			<div class="start">Start with Home Picker
+                <img src="img/logo/Logo_vs1.1_62x62.png">
+            </div>
+		</div>
+        <a href="#services">
+		<div class="scroll-down">
+            <span>
+                <i class="fa fa-angle-down fa-2x"></i>
+            </span>
+		</div>
+        </a>
+	</section>
+
+	<!-- Home end -->
+
+	<!-- Navigation start -->
+
+	<header class="header">
+
+		<nav class="navbar navbar-custom" role="navigation">
+
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="css/icons/logo_32x31.png"></a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#services">Pick Home</a></li>
+                        <!--<li><a href="#portfolio">Works</a></li>
+                        <li><a href="#skills">Skills</a></li>
+						<li><a href="#testimonials">Testimonials</a></li>-->
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div><!-- .container -->
+		</nav>
+	</header>
+
+	<!-- Navigation end -->
+
+    <!-- Services start -->
+    
+    
+    <section ng-switch="assignment.id">
+        <!-- section default-->
+        <section ng-switch-when='startService' class="my-switch-animation" id="services" class="pfblock pfblock-gray">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-6 col-sm-offset-3">
+
+                        <div class="pfblock-header wow fadeInUp">
+                            <h3 class="pfblock-title">sign in and uses our service.</h3>
+                            <div class="pfblock-line"></div>
+                            <div class="pfblock-subtitle">
+                                <input>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+
+                        <div class="iconbox wow slideInLeft">
+                            <div class="iconbox-icon">
+                                <span class="icon-clock"></span>
+                            </div>
+                            <div class="iconbox-text">
+                                <h3 class="iconbox-title">Save time</h3>
+                                <div class="iconbox-desc">
+                                 HomePicker help you to save time because we have a system help you to search your onw preferences that you want, or need.    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <div class="iconbox wow slideInLeft">
+                            <div class="iconbox-icon">
+                                <span class="icon-puzzle"></span>
+                            </div>
+                            <div class="iconbox-text">
+                                <h3 class="iconbox-title">Easy way to pick.</h3>
+                                <div class="iconbox-desc">
+                                You would pick photos from a diferente place, it's for you to see all the diferent options  that you have. 
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </section>
+
+        <!-- Services end -->
+
+
+        <section ng-switch-when='contact' class="my-switch-animation" id="contact" class="pfblock">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-sm-6 col-sm-offset-3">
+
+                        <div class="pfblock-header">
+                            <h2 class="pfblock-title">Drop us a line</h2>
+                            <div class="pfblock-line"></div>
+                            <div class="pfblock-subtitle">
+                                "You can design and create, and build the most wonderful place in the world. But it takes people to make the dream a reality.", Walt Disney.
+                                We are here for make real this dreams.
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div><!-- .row -->
+
+                <div class="row">
+
+                    <div class="col-sm-6 col-sm-offset-3">
+
+                        <form id="contact-form" role="form">
+                            <div class="ajax-hidden">
+                                <div class="form-group wow fadeInUp">
+                                    <label class="sr-only" for="c_name">Name</label>
+                                    <input type="text" id="c_name" class="form-control" name="c_name" placeholder="Name">
+                                </div>
+
+                                <div class="form-group wow fadeInUp" data-wow-delay=".1s">
+                                    <label class="sr-only" for="c_email">Email</label>
+                                    <input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+                                </div>
+
+                                <div class="form-group wow fadeInUp" data-wow-delay=".2s">
+                                    <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Message"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Send Message</button>
+                            </div>
+                            <div class="ajax-response"></div>
+                        </form>
+
+                    </div>
+
+                </div><!-- .row -->
+            </div><!-- .container -->
+        </section>
+    </section>
+
+	<!-- Contact end -->
+
+	<!-- Footer start -->
+
+    <footer id="footer" ng-include="'html/clearTheme/footer.html'">
+    </footer>
+
+	<!-- Footer end -->
+
+	<!-- Scroll to top -->
+
+	<div class="scroll-up">
+		<a href="#home"><i class="fa fa-angle-up"></i></a>
+	</div>
+    
+    <!-- Scroll to top end-->
+
+	<!-- Javascript files -->
+
+	<script src="cleantheme/js/jquery-1.11.1.min.js"></script>
+	<script src="cleantheme/bootstrap/js/bootstrap.min.js"></script>
+	<script src="cleantheme/js/jquery.parallax-1.1.3.js"></script>
+	<script src="cleantheme/js/imagesloaded.pkgd.js"></script>
+	<script src="cleantheme/js/jquery.sticky.js"></script>
+	<script src="cleantheme/js/smoothscroll.js"></script>
+	<script src="cleantheme/js/wow.min.js"></script>
+    <script src="cleantheme/js/jquery.easypiechart.js"></script>
+    <script src="cleantheme/js/waypoints.min.js"></script>
+    <script src="cleantheme/js/jquery.cbpQTRotator.js"></script>
+	<script src="cleantheme/js/custom.js"></script>
+    <script src="js/angular/angular.js"></script>
+    <script src="js/angular/angular-animated.js"></script>
+    <script src="js/homePickerApp/homePickerApp.js"></script>
+    <script src="js/bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h3>Begin to pick for your new  home, just a few picks</h3>
+            <hr class="star-primary">
+        </div>
+    </div>
+    <div class="row control-group">
+        <div class="form-group col-xs-12 floating-label-form-group2 controls">
+            <label>ZipCode</label>
+            <input type="text" class="form-control-new" ng-model="tindHouseModel.zipCode" ng-pattern="patterns.number" placeholder="Enter Zip Code here" id="name" required data-validation-required-message="Please enter the Zip Code.">
+            <p class="help-block text-danger"></p>
+        </div>
+        <div class="form-group col-xs-12 floating-label-form-group controls">
+             <i class="glyphicon glyphicon-chevron-down">advantage options</i>
+        </div>
+    </div> 
+    <div class="row animate-show" ng-show="showAnotherOption()">
+        <div class="col-lg-8 col-lg-offset-2">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+            <form name="sentMessage" id="contactForm" novalidate>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                    	<label>Min Price</label>
+	                    <input type="text" ng-model="tindHouseModel.minPrice" class="form-control" placeholder="Minimun price" id="name" required data-validation-required-message="Please enter Max price.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Max Price</label>
+                    	<input type="text" ng-model="tindHouseModel.maxPrice" class="form-control" placeholder="Maximun price" id="name" required data-validation-required-message="Please enter Min Price.">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>Number Bed Rooms</label>
+                        <input type="text" ng-model="tindHouseModel.numBedRoom" class="form-control" placeholder="number Bed rooms" id="name" required data-validation-required-message="Please enter Numbers Bed Room.">
+                        <p class="help-block text-danger"></p>
+                    </div>  
+                    <div  class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Number Bath Rooms</label>
+                            <input type="text" ng-model="tindHouseModel.numBathRoom" class="form-control" placeholder="number Bath rooms" id="name" required data-validation-required-message="Please enter number Bath room.">
+                            <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                    <div class="form-group col-xs-12">
+                        <button type="submit" class="btn btn-success btn-lg" ng-click = "consultHouses()">Search in HomePicker</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
